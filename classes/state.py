@@ -19,3 +19,13 @@ class InterviewState(MessagesState):
     interview: str
     sections: list
 
+class ResearchGraphState(TypedDict):
+    topic: str
+    max_analysts: int
+    human_analyst_feedback: str
+    analysts: List[Analyst]
+    sections: Annotated[list, operator.add]
+    introduction: str
+    content: str
+    conclusion: str
+    final_report: str
